@@ -288,7 +288,6 @@ function ForumSection() {
               >
                 Rejoindre le Forum Réseaux
               </a>
-              <p className="mt-3 text-sm text-slate-400">Actuellement redirigé vers WhatsApp. Remplace FORUM_GROUP_LINK par ton lien de groupe quand il sera créé.</p>
             </div>
           </div>
         </div>
