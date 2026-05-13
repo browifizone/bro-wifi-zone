@@ -92,7 +92,6 @@ export default function BroWifiZoneLandingPage() {
       <ForumSection />
       <Contact />
       <FloatingWhatsApp />
-      <InternalChecks allTestsPassed={allTestsPassed} />
       <Footer />
     </main>
   );
@@ -407,17 +406,6 @@ function LogoImage({ small = false }) {
 
 function IconBadge({ icon }) {
   return <div className="inline-flex rounded-2xl bg-cyan-400 p-3 text-slate-950"><InlineIcon name={icon} className="h-6 w-6" /></div>;
-}
-
-function InternalChecks({ allTestsPassed }) {
-  return (
-    <section className="mx-auto max-w-7xl px-5 pb-10">
-      <div className={`rounded-2xl border p-4 text-sm ${allTestsPassed ? "border-emerald-400/40 bg-emerald-400/10 text-emerald-100" : "border-red-400/40 bg-red-400/10 text-red-100"}`}>
-        <p className="font-bold">Vérification interne de la page</p>
-        <ul className="mt-2 space-y-1">{testResults.map((test) => <li key={test.name}>{test.passed ? "✓" : "✕"} {test.name}</li>)}</ul>
-      </div>
-    </section>
-  );
 }
 
 function Footer() {
